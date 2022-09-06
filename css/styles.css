@@ -24,8 +24,8 @@ body {
 /* image container */
 .desktop-picture {
     grid-area: desktop-picture;
-    width: 250px;
-    height: 440px;
+    width: 295px;
+    height: 480px;
     justify-self: end; 
     display: inline-block;
 }
@@ -41,7 +41,7 @@ img {
     grid-area: text;
     display: inline-block;
     width: 275px;
-    height: 400px;
+    height: 440px;
     justify-self: start;
     background-color: hsl(0, 0%, 100%);
     padding: 20px 40px 20px 40px;
@@ -69,6 +69,7 @@ p#description {
     color: hsl(212, 21%, 14%);
     font-size: 14px;
     word-spacing: 0.5em;
+    line-height: 2em;
 }
 
 p#discounted-price {
@@ -106,19 +107,16 @@ button#cart {
     height: 100%;
 }
 
-button#cart:hover {
-   background-color: hsl(158, 53%, 25%); 
-}
-
-button#cart:active {
-    background-color: hsl(158, 53%, 25%);
+button#cart:hover, button#cart:active  {
+   background-color: hsl(158, 53%, 25%);
+   cursor: pointer; 
 }
 
 span#cart-text {
     grid-area: cart-text;
     justify-self: start;
     display: block;
-    padding-top: 12px;
+    padding: 12px 0px 0px 5px;
     color: hsl(0, 0%, 100%);
     font-size: 14px;
     font-family: 'Montserrat', sans-serif; 
