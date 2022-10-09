@@ -1,0 +1,153 @@
+/* This is the first draft stylesheet for the mobile layout */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+@media screen and (max-width: 375px) {
+    /* Cream color background */
+    body {
+        background-color: hsl(30, 38%, 92%);
+    }
+
+    /* grid display for mobile */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "mobile-picture"
+        "text"
+        "attribution";
+        row-gap: 0px;
+    }
+
+    /* hide desktop image when in mobile format */
+    img#dt {
+        display: none;
+    }
+
+    /* mobile image container */
+    .mobile-picture {
+        grid-area: mobile-picture;
+        width: 345px;
+        height: 270px;
+        margin: 15px 7.5px 0px 7.5px;
+        align-self: last baseline;
+    }
+
+    /* size, orientation, and shape of mobile image */
+    img#mb {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 10px 10px;
+        border-top-right-radius: 10px 10px;
+    }
+
+    /* styles text container */
+    .text {
+        grid-area: text;
+        width: 305px;
+        height: 482px;
+        margin: 0px 7.5px 15px 7.5px;
+        padding: 20px;
+        align-self: first baseline;
+        background-color: hsl(0, 0%, 100%);
+        border-bottom-left-radius: 10px 10px;
+        border-bottom-right-radius: 10px 10px;
+    }
+    
+    /* product type */
+    h2#category {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: hsl(228, 12%, 48%);
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+    }
+
+    /* name of the product/perfume */
+    h1#perfume {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        color: black;
+        padding-right: 20px;
+    }
+
+    /* product description */
+    p#description {
+        font-family: 'Montserrat', sans-serif;
+        color: hsl(212, 21%, 14%);
+        font-size: 14px;
+        word-spacing: 0.5em;
+        line-height: 2em;
+    }
+
+    /* updated price */
+    p#discounted-price {
+        font-family: 'Fraunces', serif;
+        color: hsl(158, 36%, 37%);
+        font-weight: 700;
+        display: inline;
+        font-size: 30px;
+    }
+
+    /* previous price */
+    p#price {
+        padding: 10px;
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+        display: inline;
+        font-size: 14px;
+        text-align: top;
+    }
+
+    /* cart div */
+    .cart {  
+        padding-top: 20px;
+        padding-left: 15px;
+        width: 275px;
+        height: 50px; 
+    }
+
+    /* add to cart button styles */
+    button#cart { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "cart-icon cart-text cart-text";
+        background-color: hsl(158, 36%, 37%);
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* change color with active/hover */
+    button#cart:hover, button#cart:active  {
+        background-color: hsl(158, 53%, 25%);
+        cursor: pointer; 
+    }
+
+    /* 'add to cart' text inside button */
+    span#cart-text {
+        grid-area: cart-text;
+        justify-self: start;
+        display: block;
+        padding: 12px 0px 0px 5px;
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif; 
+    }
+
+    /* cart.png inside button */
+    img#cart-icon {
+        grid-area: cart-icon;
+        justify-self: end;
+        float: left;
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        display: inline;
+    }
+}
